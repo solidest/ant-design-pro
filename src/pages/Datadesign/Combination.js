@@ -9,8 +9,7 @@ import { Table } from 'antd';
 
 var code =
   'weight: #重量\n    - 0.4\n    - 0.5\n    - 4.5\n    - 4.6\nposinfo: #位置信息\n    start: #起始位置和方向\n        - {p0: 0, towards: right}\n        - {p0: 1, towards: right}\n';
-code +=
-  '        - {p0: 1, towards: left}\n        - {p0: 99, towards: right}\n        - {p0: 99, towards: left}\n        - {p0: 100, towards: left}\n';
+code += '        - {p0: 1, towards: left}\n        - {p0: 99, towards: right}\n        - {p0: 99, towards: left}\n        - {p0: 100, towards: left}\n';
 code += '    speed: #行进速度\n        - 0\n        - 5\n        - 5.1';
 
 const columns = [
