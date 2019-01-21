@@ -14,5 +14,5 @@ export default {
   'menu.casedesign.script': 'custom script',
   'menu.performance': 'performance',
   'menu.performance.config': 'config',
-  'menu.performance.control': 'control',
+  'menu.performance.control': 'control'
 };

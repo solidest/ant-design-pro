@@ -1,15 +1,15 @@
 export default [
-  // user
-  {
-    path: '/user',
-    component: '../layouts/UserLayout',
-    routes: [
-      { path: '/user', redirect: '/user/login' },
-      { path: '/user/login', component: './User/Login' },
-      { path: '/user/register', component: './User/Register' },
-      { path: '/user/register-result', component: './User/RegisterResult' },
-    ],
-  },
+    // user
+    {
+      path: '/user',
+      component: '../layouts/UserLayout',
+      routes: [
+        { path: '/user', redirect: '/user/login' },
+        { path: '/user/login', component: './User/Login' },
+        { path: '/user/register', component: './User/Register' },
+        { path: '/user/register-result', component: './User/RegisterResult' },
+      ],
+    },
   // app
   {
     path: '/',
@@ -22,7 +22,7 @@ export default [
       {
         path: '/project',
         name: 'project',
-        icon: 'bank',
+        icon: 'bank',       
       },
       // data
       { path: '/', redirect: '/datadesign/combination' },
@@ -39,13 +39,19 @@ export default [
           {
             path: '/datadesign/expect',
             name: 'expect',
-            component: './Dashboard/Analysis',
+            //component: './Dashboard/Analysis',
+          },
+          {
+            path: '/datadesign/dataconvfun',
+            name: 'dataconvfun',
+            component: './datadesign/Converfun',
           },
           {
             path: '/datadesign/generator',
             name: 'generator',
-            component: './Dashboard/Monitor',
+            component: './datadesign/Generator',
           },
+
         ],
       },
       // frame
@@ -57,12 +63,10 @@ export default [
           {
             path: '/frame/binmessage',
             name: 'binmessage',
-            component: './Forms/BasicForm',
           },
           {
             path: '/frame/textmessage',
             name: 'textmessage',
-            component: './Forms/StepForm',
           },
         ],
       },
@@ -105,6 +109,7 @@ export default [
           },
         ],
       },
+      
 
       {
         component: '404',

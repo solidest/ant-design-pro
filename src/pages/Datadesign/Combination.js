@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { UnControlled as CodeMirror } from 'react-codemirror2';
 import 'codemirror/lib/codemirror.css';
 import 'codemirror/mode/yaml/yaml';
-import 'codemirror/theme/idea.css';
+import 'codemirror/theme/rubyblue.css';
 
 import { Table } from 'antd';
 
@@ -78,12 +78,12 @@ class DataCombination extends Component {
             value={code}
             options={{
               mode: 'yaml',
-              theme: 'idea',
+              theme: 'rubyblue',
               lineNumbers: true,
             }}
           />
         </div>
-        <div style={{ width: '60%', height: '100%' }}>
+        <div style={{ width: '60%', height: '100%', background: '#FCFCFC'}}>
           <Table columns={columns} dataSource={data} pagination={false} />
         </div>
       </div>
