@@ -1,15 +1,15 @@
 export default [
-    // user
-    {
-      path: '/user',
-      component: '../layouts/UserLayout',
-      routes: [
-        { path: '/user', redirect: '/user/login' },
-        { path: '/user/login', component: './User/Login' },
-        { path: '/user/register', component: './User/Register' },
-        { path: '/user/register-result', component: './User/RegisterResult' },
-      ],
-    },
+  // user
+  {
+    path: '/user',
+    component: '../layouts/UserLayout',
+    routes: [
+      { path: '/user', redirect: '/user/login' },
+      { path: '/user/login', component: './User/Login' },
+      { path: '/user/register', component: './User/Register' },
+      { path: '/user/register-result', component: './User/RegisterResult' },
+    ],
+  },
   // app
   {
     path: '/',
@@ -22,7 +22,7 @@ export default [
       {
         path: '/project',
         name: 'project',
-        icon: 'bank',       
+        icon: 'bank',
       },
       // data
       { path: '/', redirect: '/datadesign/combination' },
@@ -105,7 +105,6 @@ export default [
           },
         ],
       },
-      
 
       {
         component: '404',

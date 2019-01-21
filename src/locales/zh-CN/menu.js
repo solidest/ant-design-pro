@@ -14,5 +14,5 @@ export default {
   'menu.casedesign.script': '自定义脚本',
   'menu.performance': '执行管理',
   'menu.performance.config': '环境配置',
-  'menu.performance.control': '用例调度'
+  'menu.performance.control': '用例调度',
 };
