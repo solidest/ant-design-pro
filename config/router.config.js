@@ -44,12 +44,12 @@ export default [
           {
             path: '/datadesign/dataconvfun',
             name: 'dataconvfun',
-            component: './datadesign/Converfun',
+            component: './Datadesign/Converfun',
           },
           {
             path: '/datadesign/generator',
             name: 'generator',
-            component: './datadesign/Generator',
+            component: './Datadesign/Generator',
           },
 
         ],
@@ -63,6 +63,7 @@ export default [
           {
             path: '/frame/binmessage',
             name: 'binmessage',
+            component: './Framedesign/Binframe',
           },
           {
             path: '/frame/textmessage',
