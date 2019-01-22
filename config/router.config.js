@@ -37,11 +37,6 @@ export default [
             component: './Datadesign/Combination',
           },
           {
-            path: '/datadesign/expect',
-            name: 'expect',
-            //component: './Dashboard/Analysis',
-          },
-          {
             path: '/datadesign/dataconvfun',
             name: 'dataconvfun',
             component: './Datadesign/Converfun',

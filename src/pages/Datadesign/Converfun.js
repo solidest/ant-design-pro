@@ -10,11 +10,37 @@ import 'codemirror/theme/rubyblue.css';
 import { Tabs, Radio } from 'antd';
 const TabPane = Tabs.TabPane;
 
-const code1 = '--将位置转换为电压值\nfunction Pos2Vol(pos)\n    return pos/25+0.5;\nend;';
-var code2 = '--根据初始位置和间隔事件计算下一点位置\nfunction GetNextPos(posinfo, time)\n    if(posinfo.start.towards=="right")\n';
-    code2 += '        return posinfo.start.p0 + posinfo.speed * time/1000;\n    else\n    	return posinfo.start.p0 - posinfo.speed * time/1000;\nend;';
+Function.prototype.getMultiLine = function() {  
+  var lines = new String(this);  
+  lines = lines.substring(lines.indexOf("/*") + 2, lines.lastIndexOf("*/"));  
+  return lines;  
+}  
 
+var code1 = function() {
+  /*
+--将位置转换为电压值
+function Pos2Vol(pos)
+    return pos/25+0.5;
+end;
+*/
+}
 
+var code2 = function() {
+/*
+--根据初始位置和间隔事件计算下一点位置
+function GetNextPos(p0, towards, speed)
+  p1 = 0;
+  if(towards=="right")
+      p1 = posinfo.start.p0 + posinfo.speed * time/1000;
+  else
+    p1 = posinfo.start.p0 - posinfo.speed * time/1000;
+  if(p1<0) p1=0;
+  if(p1>100) p1=100;
+  return p1;
+end;
+  
+*/
+}
 
 
 const data = [
@@ -41,7 +67,7 @@ class Converfun extends Component {
             <TabPane tab="Pos2Vol" key="2">
             <CodeMirror
               ref="code_editor2"
-              value={code1}
+              value={code1.getMultiLine()}
               options={{
                 mode: 'lua',
                 theme: 'rubyblue',
@@ -52,7 +78,7 @@ class Converfun extends Component {
             <TabPane tab="GetNextPos" key="3">
             <CodeMirror
               ref="code_editor3"
-              value={code2}
+              value={code2.getMultiLine()}
               options={{
                 mode: 'lua',
                 theme: 'rubyblue',
