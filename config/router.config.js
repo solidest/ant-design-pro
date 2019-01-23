@@ -75,12 +75,12 @@ export default [
           {
             path: '/casedesign/flowchart',
             name: 'flowchart',
-            component: './List/TableList',
+            component: './Casedesign/Caseflow',
           },
           {
             path: '/casedesign/sequence',
             name: 'sequence',
-            component: './List/BasicList',
+            component: './Casedesign/Casesequence',
           },
           {
             path: '/casedesign/script',

@@ -27,16 +27,14 @@ in: #输入
     - 1
     - 99
     - 100
-  p1: #位置1
-    this: 
-      GetNextPos(p0, towards, speed)
-    towards: #方向
-      - left
-      - right
-    speed: #速度
-      - 0
-      - 5
-      - 5.1
+  towards:
+    - left
+    - right
+  speed:
+    - 0
+    - 5
+    - 5.1
+  p1: GetNextPos(p0, towards, speed)
           
 out: #输出
   w_warning: #超重报警
@@ -98,23 +96,21 @@ const data = [
       },
       {
         key: 3,
+        name: 'towards',
+        notes: '方向',
+        valuelist: 'left, right'
+      },  
+      {
+        key: 4,
+        name: 'speed',
+        notes: '速度',
+        valuelist: '0, 5, 5.1'
+      },
+      {
+        key: 5,
         name: 'p1',
         notes: '位置1',
-        valuelist: 'GetNextPos(p0, towardes, speed)',
-        children: [
-          {
-            key: 31,
-            name: 'towards',
-            notes: '方向',
-            valuelist: 'left, right'
-          },  
-          {
-            key: 32,
-            name: 'speed',
-            notes: '速度',
-            valuelist: '0, 5, 5.1'
-          },
-        ]
+        valuelist: 'GetNextPos(p0, towardes, speed, 500)'
       }
     ]
   },
@@ -158,7 +154,7 @@ const data = [
 
 ];
 
-class DataCombination extends Component {
+class Casesequence extends Component {
   componentDidMount() {
     const reditor = this.refs.code_editor.editor;
     console.log(reditor);
@@ -187,4 +183,4 @@ class DataCombination extends Component {
   }
 }
 
-export default DataCombination;
+export default Casesequence;
