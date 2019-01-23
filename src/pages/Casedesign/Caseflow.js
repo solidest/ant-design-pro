@@ -176,7 +176,7 @@ class Caseflow extends Component {
             }}
           />
         </div>
-        <div style={{ width: '60%', height: '100%', background: '#FCFCFC', textAlign: 'center', marginTop: '20px'}}>
+        <div style={{ width: '60%', height: '100%', background: '#FCFCFC', textAlign: 'center', paddingTop: '20px'}}>
           <ReactSVG src={flow}/>
         </div>
       </div>
