@@ -22,7 +22,8 @@ export default [
       {
         path: '/project',
         name: 'project',
-        icon: 'bank',       
+        icon: 'bank',
+        component: './Project/Smallcar',
       },
       // data
       { path: '/', redirect: '/datadesign/combination' },
